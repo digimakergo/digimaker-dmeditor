@@ -1,0 +1,49 @@
+{
+  "name": "digimaker-dmeditor",
+  "version": "0.1.0",
+  "description": "DMEditor on digimaker-ui.",
+  "main": "dist/index.js",
+  "files": [
+    "**/*.js",
+    "*.css",
+    "locale/*.json"
+  ],
+  "bin": {
+    "test@digimaker-ui": "./src"
+  },
+  "scripts": {
+    "dist": "rm -rf dist/* && cp ./package.json README.md ./dist && tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digimakergo/digimaker-dmeditor.git"
+  },
+  "keywords": [
+    "digimaker",
+    "dmeditor"
+  ],
+  "author": "Digimaker AS",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/digimakergo/digimaker-ui/issues"
+  },
+  "homepage": "https://digimaker.org",
+  "dependencies": {
+    "react-filerobot-image-editor": "^4.9.1"  
+  },
+  "peerDependencies": {
+    "digimaker-ui": "^0.2.2",
+    "dmeditor": "^0.2.2",
+    "@emotion/css":"^11.10.0",
+    "react-konva": "^18.2.10"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "react": ">=18.2.0",
+    "react-dom": ">=18.2.0",
+    "typescript": "^4.9.5",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
+  }
+}

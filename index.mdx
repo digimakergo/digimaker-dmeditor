@@ -1,0 +1,71 @@
+---
+name: Introduction
+route: /
+---
+
+import { Playground, Props } from 'docz'
+import README from './README.md' 
+import { Hint } from '@nejcm/docz-theme-extended';
+
+# digmaker-ui
+
+digimaker-ui provides react ui components for Digimaker CMF. It provides features like create, edit, delete, actions and other editorial features.
+
+Check our sample projects
+- [admin](https://github.com/digimakergo/dmdemo/tree/master/web/admin/src)
+- [app](https://github.com/digimakergo/dmdemo/tree/master/web/app/src)
+
+## Installation
+```
+npm -i digimaker-ui
+
+// Note. for npm version > 7 you may need to run
+// npm -i digimaker-ui --legacy-peer-deps
+```
+Read [Use digimaker-ui](./use-digimaker-ui) for how to use it.
+
+Read [extend actions](./actions/Implement) and [implement your own field types](./FieldTypes).
+
+
+### Common components
+```js
+// import example
+import {Main} from 'digimaker-ui';
+```
+|  Component |  Description  |   |
+|------|---|---|
+| [List](./List) | List contents  |   |
+| [Main](./Main) | Main page for editorial site  |   |
+| [DMInit](./DMInit) | Initialize all components  |   |
+| [TreeNode](./TreeNode) | Show content in tree  |   |
+| [Browse](./Browse) | Browse contents  |   |
+| [util](./util) |  Utility |   |
+| [RenderFields](./RenderFields) |  Rendering fields in view/edit mode |   |
+| [FileUpload](./FileUpload) |  Upload file to server |   |
+
+
+### Actions
+```js
+//import example
+import {Delete} from 'digimaker-ui/actions';
+```
+| Action | Description  | Note  |
+|------|---|---|
+| Delete | Delete content  |   |
+| Copy | Copy a content  |   |
+| Move | Move content  |   |
+| SetPriority | Set priority  |   |
+| SetToTop | Set to top  |   |
+| Filter | Filter above list  |   |
+|  **User** |   || 
+| DisableUser | Diable/Enable current user |   |
+
+### Action for routing
+<Hint type="info" variant="outer">
+Note: It's not possible to configure below to action, but with wrapper(eg. dialog to implemment `ActionProps`) it's possible.
+</Hint>
+
+| Action | Description  |   |
+|------|---|---|
+| Create | Create a content  |   |
+| Edit | Edit a content  | |
